@@ -43,11 +43,11 @@
       flex-wrap: wrap;
     }
 
-    .nav-logo-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #D4537E;
+    .nav-logo {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      object-fit: cover;
       flex-shrink: 0;
     }
 
@@ -66,7 +66,7 @@
 
     /* —— Sections —— */
     .section {
-      padding: 56px 0;
+      padding: 40px 0;
     }
 
     .section--tight-top {
@@ -79,25 +79,8 @@
       padding-bottom: 56px;
     }
 
-    .hero-eyebrow {
-      font-size: 13px;
-      color: #AFA9EC;
-      margin-bottom: 20px;
-    }
-
-    .hero-logo {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      margin: 0 auto 24px;
-      border: 2px solid #f0e8e2;
-      box-shadow: 0 4px 16px rgba(83, 74, 183, 0.12);
-    }
-
     .hero h1 {
-      font-size: clamp(1.5rem, 5.5vw, 1.75rem);
+      font-size: 24px;
       font-weight: 700;
       color: #3C3489;
       line-height: 1.25;
@@ -216,15 +199,13 @@
     }
 
     .status-groups {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
     }
 
     .status-group {
-      margin-bottom: 32px;
-    }
-
-    .status-group:last-child {
-      margin-bottom: 0;
+      margin: 0;
     }
 
     .status-badge {
@@ -441,19 +422,15 @@
       .status-groups {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
-      }
-
-      .status-group {
-        margin-bottom: 0;
+        gap: 16px;
       }
 
       .hero h1 {
-        font-size: 42px;
+        font-size: 32px;
       }
 
       .section {
-        padding: 72px 0;
+        padding: 36px 0;
       }
     }
   </style>
@@ -462,15 +439,13 @@
   <div class="page">
     <!-- 1. Nav -->
     <nav class="nav" aria-label="PetKeep">
-      <span class="nav-logo-dot" aria-hidden="true"></span>
+      <img class="nav-logo" src="logo.png" width="28" height="28" alt="PetKeep">
       <span class="nav-brand">PetKeep</span>
       <span class="nav-tagline">· забота с любовью</span>
     </nav>
 
     <!-- 2. Hero -->
     <header class="hero section section--tight-top">
-      <p class="hero-eyebrow">PetKeep · забота с любовью</p>
-      <img class="hero-logo" src="logo.png" width="64" height="64" alt="PetKeep">
       <h1>Вся история питомца — <span class="accent">всегда под рукой</span></h1>
       <p class="hero-body">
         Проект в активной разработке. Первые пользователи получают VIP-доступ бесплатно — все данные сохранятся после запуска.
