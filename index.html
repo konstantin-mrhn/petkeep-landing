@@ -151,6 +151,107 @@
       line-height: 1.5;
     }
 
+    /* —— Vaccination calendar —— */
+    .vaccination-section {
+      padding: 40px 0;
+    }
+
+    .vaccination-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #3C3489;
+      text-align: center;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .vaccination-subtitle {
+      font-size: 14px;
+      color: #AFA9EC;
+      text-align: center;
+      margin-bottom: 32px;
+      line-height: 1.5;
+    }
+
+    .vaccination-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .vaccination-card {
+      background: #ffffff;
+      border: 0.5px solid #f0e8e2;
+      border-radius: 14px;
+      padding: 20px;
+    }
+
+    .vaccination-card-title {
+      font-size: 16px;
+      font-weight: 500;
+      color: #3C3489;
+      margin-bottom: 16px;
+    }
+
+    .vaccination-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .vaccination-table thead th {
+      font-size: 11px;
+      color: #AFA9EC;
+      text-transform: uppercase;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #f0e8e2;
+      text-align: left;
+      font-weight: 500;
+    }
+
+    .vaccination-table tbody td {
+      font-size: 13px;
+      padding: 8px 0;
+      border-bottom: 0.5px solid #f0e8e2;
+      vertical-align: top;
+    }
+
+    .vaccination-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .vaccination-table .col-age {
+      color: #3C3489;
+      font-weight: 500;
+      width: 35%;
+      padding-right: 8px;
+    }
+
+    .vaccination-table .col-vaccine {
+      color: #888780;
+    }
+
+    .vaccination-card-note {
+      font-size: 11px;
+      color: #AFA9EC;
+      margin-top: 12px;
+      line-height: 1.45;
+    }
+
+    .vaccination-cta {
+      text-align: center;
+      margin-top: 24px;
+    }
+
+    .vaccination-cta-text {
+      font-size: 14px;
+      color: #9B8DB0;
+      margin-bottom: 12px;
+      line-height: 1.5;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     /* —— Features grid —— */
     .features-grid {
       display: grid;
@@ -454,6 +555,14 @@
       .section {
         padding: 36px 0;
       }
+
+      .vaccination-section {
+        padding: 56px 0;
+      }
+
+      .vaccination-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   </style>
 </head>
@@ -475,6 +584,81 @@
       <a class="btn-cta" href="https://app.petkeep.ru">Начать пользоваться →</a>
       <p class="hero-note">Базовый тариф бесплатно навсегда · без скачивания · открывается в браузере</p>
     </header>
+
+    <!-- Vaccination calendar -->
+    <section class="vaccination-section" aria-labelledby="vaccination-title">
+      <h2 id="vaccination-title" class="vaccination-title">Календарь прививок</h2>
+      <p class="vaccination-subtitle">Обязательные прививки для кошек и собак по законодательству РФ</p>
+
+      <div class="vaccination-grid">
+        <article class="vaccination-card">
+          <h3 class="vaccination-card-title">🐶 Собаки</h3>
+          <table class="vaccination-table">
+            <thead>
+              <tr>
+                <th scope="col">Возраст</th>
+                <th scope="col">Прививка</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-age">8–9 недель</td>
+                <td class="col-vaccine">Комплексная: чума, парвовироз, гепатит, лептоспироз</td>
+              </tr>
+              <tr>
+                <td class="col-age">11–13 недель</td>
+                <td class="col-vaccine">Повтор комплексной + бешенство 💉</td>
+              </tr>
+              <tr>
+                <td class="col-age">1 год</td>
+                <td class="col-vaccine">Ревакцинация всех прививок</td>
+              </tr>
+              <tr>
+                <td class="col-age">Ежегодно</td>
+                <td class="col-vaccine">Комплексная + бешенство</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="vaccination-card-note">На основании ФЗ № 498-ФЗ и Приказа Минсельхоза № 705 от 25.11.2020</p>
+        </article>
+
+        <article class="vaccination-card">
+          <h3 class="vaccination-card-title">🐱 Кошки</h3>
+          <table class="vaccination-table">
+            <thead>
+              <tr>
+                <th scope="col">Возраст</th>
+                <th scope="col">Прививка</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-age">8–9 недель</td>
+                <td class="col-vaccine">Комплексная: панлейкопения, ринотрахеит, калицивироз</td>
+              </tr>
+              <tr>
+                <td class="col-age">11–12 недель</td>
+                <td class="col-vaccine">Повтор комплексной + бешенство 💉</td>
+              </tr>
+              <tr>
+                <td class="col-age">1 год</td>
+                <td class="col-vaccine">Ревакцинация всех прививок</td>
+              </tr>
+              <tr>
+                <td class="col-age">Ежегодно</td>
+                <td class="col-vaccine">Комплексная + бешенство</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="vaccination-card-note">На основании ФЗ № 498-ФЗ и Приказа Минсельхоза № 705 от 25.11.2020</p>
+        </article>
+      </div>
+
+      <div class="vaccination-cta">
+        <p class="vaccination-cta-text">Внесите прививки питомца в PetKeep — приложение само напомнит когда следующая</p>
+        <a class="btn-cta" href="https://app.petkeep.ru">Внести прививки →</a>
+      </div>
+    </section>
 
     <!-- 3. Features -->
     <section class="section" aria-labelledby="features-heading">
